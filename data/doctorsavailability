@@ -1,0 +1,34 @@
+{
+  "doctorsDetails": [
+    {
+      "Name": "Dr X",
+      "Qualification": "MBBS,MD,GYN,DGO,FICOG",
+      "location": [
+        {
+          "Location1": "Kondapur",
+          "availableDate1": {
+            "Date1": "26/08/2016",
+            "Date2": "30/08/2016",
+            "Date3":"05/09/2016"
+          },
+          "Time1": {
+            "fromTime": "09:00",
+            "toTime": "12:00"
+          }
+        }
+      ]
+    },
+    {
+      "Location2": "Gachibowli",
+      "availableDate2": {
+        "Date1": "09/09/2016",
+        "Date2": "13/09/2016",
+        "Date3": "15/09/2016"
+      },
+      "Time2": {
+        "fromTime": "15:00",
+        "toTime": "18:00"
+      }
+    }
+  ]
+}
