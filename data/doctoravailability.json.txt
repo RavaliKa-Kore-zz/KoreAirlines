@@ -1,0 +1,25 @@
+{
+  "doctorsDetails": [
+    {
+      "name": "Dr X",
+      "qualification": "MBBS,MD,GYN,DGO,FICOG",
+      "date": "26/08/2016",
+      "location": [
+        {
+          "Location1": "Kondapur",
+          "Time1": {
+            "fromTime": "09:00",
+            "toTime": "12:00"
+          }
+        }
+      ]
+    },
+    {
+      "location2": "Gachibowli",
+      "Time2": {
+        "fromTime": "15:00",
+        "toTime": "18:00"
+      }
+    }
+  ]
+}
