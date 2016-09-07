@@ -1,16 +1,16 @@
 {
     "Inputs for Email Lab Reports": {
-        "Receipt Number": "12345ABCD"
+        "receiptNumber": "12345ABCD"
     },
     "Final Confirmation": {
-        "Name": "James Bond",
-        "Age": "45",
-        "Gender": "Male",
-        "Location": "Gachibowli, Hyderabad",
-        "Department": "Radiology",
-        "Tests": "MRI, Ultrasound Test",
-        "Date of Test": "22/08/2016",
-        "Mobile": "8179343535",
-        "Email": "abcd@gmail.com"
+        "name": "James Bond",
+        "age": "45",
+        "gender": "Male",
+        "location": "Gachibowli, Hyderabad",
+        "department": "Radiology",
+        "tests": "MRI, Ultrasound Test",
+        "date of Test": "22/08/2016",
+        "mobile": "8179343535",
+        "email": "abcd@gmail.com"
     }
 }
