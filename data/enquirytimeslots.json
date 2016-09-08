@@ -1,0 +1,10 @@
+{
+    "inputsForEnquireTimeSlots" :{
+        "nameOfTest": "MRI"
+    },
+    
+    "availableTimeSlots": {
+        "nameOfTheTest": "MRI",
+        "dateandTimeOftheTest": "10/08/2016 13:00"
+    }
+}
