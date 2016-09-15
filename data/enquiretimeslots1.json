@@ -1,7 +1,7 @@
 {
     "inputsForEnquireTimeSlots" :{
-	    "nameOfTest": "MRI"
-		"location":   "kondapur"
+	    "nameOfTest": "MRI",
+		"location":"kondapur"
     },
     
     "availableTimeSlots": {
