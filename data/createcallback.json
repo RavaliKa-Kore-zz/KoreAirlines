@@ -1,5 +1,5 @@
 {
-    "callBackRequest": [
+    "callBackRequest":
         {
             "name": "James Bond",
             "age": "45",
@@ -9,5 +9,4 @@
             "prefferedTimings1": "9AM to 12PM",
             
         }
-    ]
 }
