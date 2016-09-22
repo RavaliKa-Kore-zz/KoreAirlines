@@ -1,0 +1,15 @@
+{
+    "createAnAccomodation": 
+        {
+            "patient ID": "ABCD1234",
+            "location 1": "Kondapur",
+            "location 2": "Gachibowli",
+            "accomodation Type 1": "Economy Non A/C",
+            "accomodation Type 1 Cost": "1500 INR",
+            "accomodation Type 2": "Semi Private Room Sharing A/C",
+            "accomodation Type 2 Cost": "3000 INR",
+            "accomodation Type 3": "Private Room A/C",
+            "accomodation Type 3 Cost": "6000 INR",
+            "dateOfAccomodation": "Aug 20"
+        }
+}
