@@ -1,8 +1,8 @@
 {
     "enquireAccomodationAvailability": 
         {
-            "location 1": "Kondapur",
-            "location 2": "Gachibowli",
+            "location1": "Kondapur",
+            "location2": "Gachibowli",
             "accomodationType1": "Economy Non A/C",
             "accomodationType1Cost": "1500 INR",
             "accomodationType2": "Semi Private Room Sharing A/C",
