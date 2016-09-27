@@ -1,0 +1,9 @@
+{
+    "enquirePharmacyStoreQueries": 
+        {
+            "patientID": "ABCD1234",
+            "totalBillAmount": "80000 INR",
+            "advanceAmountPaid": "20000 INR",
+            "balanceAmount": "60000 INR",
+        }
+}
