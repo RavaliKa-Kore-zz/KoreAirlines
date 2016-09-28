@@ -1,12 +1,29 @@
 {
-    "enquirePharmacyQueries": 
-        {
-		    "pharmacyQueries":"Pharmacy Store Timings", 
-            "location1": "Kondapur",
-            "location2": "Gachibowli",
-            "timingsofLocation1" : "9AM to 11PM",
-            "timingsofLocation2" : "10AM to 10PM",
-            "pharmacyAvailableatLocation1": "Yes",
-            "pharmacyAvailableatLocation2": "Yes"
-        }
-}
+    "pharmacyQueries":
+    [
+	    "Pharmacy Store Timings",
+		"Pharmacy Store Availabilty"
+	],
+	"queries":[
+	{
+	"queries1":"Pharmacy Store Timings",
+	"timings":[
+	"9:00AM to 10:00PM",
+	"10:00AM to 11:00AMpm"
+	]
+	},
+	{
+	"queries2":"Pharmacy Store Availabilty",
+	"availability":
+	[
+	"It is available in Kondapur",
+	It is available in Gachibowli"
+	]
+	}
+	]
+	}
+	
+	
+	
+	
+	
