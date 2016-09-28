@@ -1,0 +1,12 @@
+{
+    "enquirePharmacyQueries": 
+        {
+		    "pharmacyQueries":"Pharmacy Store Timings", 
+            "location1": "Kondapur",
+            "location2": "Gachibowli",
+            "timingsofLocation1" : "9AM to 11PM",
+            "timingsofLocation2" : "10AM to 10PM",
+            "pharmacyAvailableatLocation1": "Yes",
+            "pharmacyAvailableatLocation2": "Yes"
+        }
+}
