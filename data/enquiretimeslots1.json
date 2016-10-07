@@ -6,6 +6,7 @@
     
     "availableTimeSlots": {
         "nameOfTheTest": "MRI",
-        "dateandTimeOftheTest": "2013-10-21T13:28:06.419Z"
+        "dateOftheTest": "2016-10-21",	
+		"timeOftheTest": "11:30AM"
     }
 }
