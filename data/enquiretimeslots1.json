@@ -1,7 +1,8 @@
 {
     "inputsForEnquireTimeSlots" :{
 	    "nameOfTest": "MRI",
-		"location":"kondapur"
+		"location":"kondapur",
+		"branchlocaation":"Hennepin County Medical Center"
     },
     
     "availableTimeSlots": {
