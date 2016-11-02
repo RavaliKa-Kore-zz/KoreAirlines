@@ -2,8 +2,10 @@
     "enquirePharmacyStoreQueries": 
         {
             "patientID": "ABCD1234",
-            "totalBillAmount": "80000 INR",
-            "advanceAmountPaid": "20000 INR",
-            "balanceAmount": "60000 INR"
-        }
+            "totalBillAmount": "80000 USD",
+            "advanceAmountPaid": "20000 USD",
+            "balanceAmount": "60000 USD",
+			"Claim Amount Available (TPA)": "2000 USD",
+			"CPF":"200 USD"
+			}
 }
