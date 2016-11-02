@@ -1,5 +1,8 @@
 {
-    "pharmacyQueries":
+    
+	"location":"Kondapur",
+	"branchlocation":"Northrop Memorial Auditorium, Minneapolis"
+	"pharmacyQueries":
     [
 	    "Pharmacy Store Timings",
 		"Pharmacy Store Availabilty"
