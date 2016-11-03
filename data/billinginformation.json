@@ -1,8 +1,8 @@
 {
     "array": [
         {
-            "hsptl": "Name: John\nAge: 45\nAddress: NYC\nContact: 123456789",
-            "tpa": "Insurance Type: Private\nRider Availability: Yes",
+            "hsptl": "Name: John<br>Age: 45<br>Address: NYC<br>Contact: 123456789",
+            "tpa": "Insurance Type: Private<br>Rider Availability: Yes",
             "cpf": "Funds Available: 500 USD"
         }
     ]
