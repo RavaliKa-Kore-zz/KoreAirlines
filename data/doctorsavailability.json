@@ -6,7 +6,7 @@
       "date": "26/08/2016",
       "location": [
         {
-          "Location1": "Kondapur",
+          "Location1": "Hennepin County Medical Center ",
           "Time1": {
             "fromTime": "09:00",
             "toTime": "12:00"
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "location2": "Gachibowli",
+      "location2": "University of Minnesota Medical Center ",
       "Time2": {
         "fromTime": "15:00",
         "toTime": "18:00"
