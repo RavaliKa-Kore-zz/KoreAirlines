@@ -19,7 +19,7 @@
             "cpf": ""
         },{
             "hsptl":"Billing Summary,Total Bill Amount: 8000 USD,Claim Amount Available (TPA): 2000 USD,CPF:200 USD,Advance Paid: 1000 USD,Balance Amount: 4800 USD",
-            "tpa": "Max limit Per treatment,,Room: 500 USD per day,Surgery: Sum Assured,Dr Fees: NA,Operation Theater: 750 USD per day",
+            "tpa": "Max limit Per treatment,Room: 500 USD per day,Surgery: Sum Assured,Dr Fees: NA,Operation Theater: 750 USD per day",
             "cpf": ""
         },{
             "hsptl":"Payments Made: 1000 USD",
@@ -35,7 +35,7 @@
             "cpf": ""
         },{
             "hsptl":"Billing Estimates: 8000 USD",
-            "tpa": "Supporting Documents for policy claim: Discharge Summary from the Hospital and Patient Insurance Card",
+            "tpa": "Supporting Documents for policy,claim: Discharge Summary from the Hospital and Patient Insurance Card",
             "cpf": ""
         }
     ]
