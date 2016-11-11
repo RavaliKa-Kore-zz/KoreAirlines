@@ -36,7 +36,7 @@
           "Physician Consultation",
           "Cardiology Consultation"
         ],
-        "packageCost": " 6000 USD"
+        "packageCost": " 600 USD"
       },
       {
         "name": "Child Health Package",
@@ -58,7 +58,7 @@
           "Dental Consultation",
           "Paediatrician Consultation"
         ],
-        "PackageCost": "2400 USD"
+        "PackageCost": "400 USD"
       },
       {
         "name": "General Health Checkup",
@@ -86,7 +86,7 @@
           "Dental Consultation",
           "Physician Consultation"
         ],
-        "PackageCost": "3500 USD"
+        "PackageCost": "500 USD"
       },
       {
         "name": "Premium Health Checkup",
@@ -127,7 +127,7 @@
           "Dietician Consultation",
           "Doctor Consultation"
         ],
-        "PackageCost": "9500 USD"
+        "PackageCost": "500 USD"
       },
       {
         "name": "Executive Health Checkup",
@@ -163,7 +163,7 @@
           "Dietician Consultation",
           "Doctor Consultation"
         ],
-        "PackageCost": "6700 USD"
+        "PackageCost": "700 USD"
       }
     ]
   }
