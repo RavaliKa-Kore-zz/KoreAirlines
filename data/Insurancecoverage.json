@@ -1,9 +1,0 @@
-{
-"insuranceDetails":
-{
-"patientID":"ABCD123",
-"labtest":"MRI",
-"labtest2":"XRay",
-"labtest3":"Ultrasound"
-}
-}

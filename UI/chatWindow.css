@@ -1,0 +1,456 @@
+/*global css */
+.pos-absolute{
+    position: absolute!important;
+}
+.pos-relative{
+    position: relative!important;
+}
+
+[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+    display: block; /* For Firefox */
+    color: #D0D0D0;
+}
+
+/*code for kore chat window*/
+.kore-chat-window *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.kore-chat-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1020;
+    background: rgba(255,255,255,0.8);
+    display: none;
+}
+
+.kore-chat-window{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 400px;   
+    min-width: 400px;
+    max-height: 90%;
+    height: 90%;
+    min-height: 200px;
+    border: 1px solid #EEEEEE;
+    background: white;
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 1030;
+}
+
+.kore-chat-window.expanded{
+    min-width: 330px;
+    width: 50%!important;
+    min-height: 90%;
+    bottom:10px!important;
+    top: auto!important;
+    left:auto!important;
+    right: 10px!important;
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,.2);
+}
+
+.kore-chat-window.minimize{
+    min-height: 48px!important;
+    height: 48px!important;
+    width: auto!important;
+    min-width: auto!important;
+    bottom:20px!important;
+    top: auto!important;
+    left:auto!important;
+    right: 20px!important;
+    border: none;
+    background:none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.kore-chat-window.minimize .kore-chat-body,.kore-chat-window.minimize .kore-chat-footer,.kore-chat-window.minimize .kore-chat-header{
+    display: none;
+}
+.kore-chat-window.minimize .minimized-title{
+    float: left;
+    max-width: 0px;
+    width: auto;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-right: 35px;
+    color: white;
+    margin-top: 6px;
+    padding: 8px 20px 8px 10px;
+    background: #009DAB; 
+    border-radius: 20px 0 0 20px;
+    display:block;
+    opacity: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.6s ease-in;
+}
+.kore-chat-window.minimize:hover .minimized-title{
+    opacity: 1;
+    max-width: 300px;
+}
+
+.kore-chat-window.minimize .minimized{
+    display: block;
+    background: #009DAB;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding: 6px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    position: absolute;
+    right:0;
+	padding: 10px;
+}
+
+.kore-chat-window .minimized,.kore-chat-window .minimized-title{
+    display:none;
+}
+
+.kore-chat-window .messages {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSIyMXB4IiB2aWV3Qm94PSIwIDAgMjIgMjEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+ODVGODJDNTAtMzI0OC00MjhFLUI1QUUtOTA2QTg5OUU3QTE3PC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+ICAgICAgICA8ZyBpZD0iMDMtc3BhY2UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOS4wMDAwMDAsIC02Ni4wMDAwMDApIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiI+ICAgICAgICAgICAgPGcgaWQ9IlNpZGUtTmF2Ij4gICAgICAgICAgICAgICAgPGcgaWQ9ImNoYXRzLWluYWN0aXZlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMC4wMDAwMDAsIDY3LjAwMDAwMCkiPiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTMuMzMzMzMzMzQsMTIuNDU5MjA4MiBDMy4zMzMzMzMzNCwxMi40NTkyMDgyIDAuNTYyNTMyOTkyLDEwLjM0NDMzNDcgMC44MzMzMzMzMzMsNi42NjY2NjY2NyBDMS4xNTA2MTM2MywzLjAwMjc3MzQ5IDQuMzI0NTEyMTEsMCA4LjMzMzMzMzMzLDAgTDExLjY2NjY2NjcsMCBDMTUuOTcwMzM4NywwIDE4LjkzNDQ4MzksMi44NjY1MjQ0NyAxOS4xNjY2NjY3LDYuNjY2NjY2NjcgQzE5LjUwMTIwMDEsMTAuNzgyMTAzNCAxNS45NzAxMTY1LDE0LjE4MTMwMjUgMTEuNjY2NjY2NywxNC4xNjY2NjY3IEwxMCwxNC4xNjY2NjY3IEw4LjMzMzMzMzMzLDE0LjE2NjY2NjcgTDIuNSwxOC4zMzMzMzMzIEwzLjMzMzMzMzMzLDE1IiBpZD0iUmVjdGFuZ2xlLTM5NiI+PC9wYXRoPiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQuMTY2NjY2NjcsMy4zMzMzMzMzMyBMNi40NDI0ODY4MSwzLjMzMzMzMzMzIEM4Ljg4NjE5Mjc2LDMuMzMzMzMzMzMgMTAuODY3MjA3OCw1LjAxNjQ3OTczIDEwLjg2NzIwNzgsNy4wODMzMzMzMyBDMTAuODY3MjA3OCw5LjE1NDQwMTE1IDguODg2MDUzNDIsMTAuODMzMzMzMyA2LjQ0NjA5NTksMTAuODMzMzMzMyIgaWQ9IlJlY3RhbmdsZS0zOTYtQ29weSIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNy41MTY5MzcsIDcuMDgzMzMzKSBzY2FsZSgtMSwgLTEpIHRyYW5zbGF0ZSgtNy41MTY5MzcsIC03LjA4MzMzMykgIj48L3BhdGg+ICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTEuNjY2NjY2NywzLjMzMzMzMzMzIEMxMy45Njc4NTMxLDMuMzMzMzMzMzMgMTUuODMzMzMzMyw1LjIwMzQ5NTk5IDE1LjgzMzMzMzMsNy41IiBpZD0iUmVjdGFuZ2xlLTM5Ni1Db3B5LTIiIHN0cm9rZS1vcGFjaXR5PSIwLjUiPjwvcGF0aD4gICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==);
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.kore-chat-window  .kore-chat-header {
+    border-bottom:1px solid #EEEEEE;
+    color: #222;
+    font-size: 16px;
+    background-color: white;
+    font-family: arial,sans-serif;
+    height: 50px;
+    line-height: 49px;
+    padding: 0 20px;
+}
+.kore-chat-header  .header-title{
+    width: 55%;
+    font-size: 16px!important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+}
+.kore-chat-header  .header-title.ui-draggable-handle{
+    cursor: move;   
+}
+.kore-chat-header .chat-box-controls{
+    width: auto;
+    display: table-cell;
+    text-align: right;
+    float: right;
+    padding-top: 0;
+    margin-right: -9px;
+    color: black;
+    margin-top: -3px;
+}
+.kore-chat-header .chat-box-controls button{
+    cursor: pointer;
+    color: #AAAAAA;
+    background: none;
+    border: none;
+    opacity: 1;
+    outline: none;
+    font-size: 29px;
+    vertical-align: top;
+    height: 51px;
+    line-height: inherit;
+}
+.kore-chat-header .chat-box-controls .reload-btn{
+    font-size:17px;
+    font-weight: bold;
+}
+.kore-chat-header .chat-box-controls .expand-btn span{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAAAAAADRMNWAAAAAnRSTlMAAHaTzTgAAABWSURBVAjXdY+xDYAwDAS9/yhXJWWwZDFABgDBDklhiZaSp8h3d9IVb7ZcB+pUE1CGcPpfpNNcReBptxTXntrHIXQ+6cTHo2wNTxX82EZBA7NZgb6+9AJNFjJH3aM64AAAAABJRU5ErkJggg==);
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    background-repeat: no-repeat;
+}
+
+.kore-chat-window .kore-chat-body{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    bottom: 53px;
+    background-color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+}
+.kore-chat-window .kore-chat-body ul.chat-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding:20px;
+}
+ul.chat-container li:first-child{
+    margin-top: 10px;
+}
+
+ul.chat-container li{
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+ul.chat-container li .extra-info{
+    color: #999;
+    font-size: 12px;
+    position: relative;
+    margin: 0;
+    padding: 0 0 5px;
+    white-space: nowrap;
+}
+
+ul.chat-container li .profile-photo{
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+ul.chat-container li .profile-photo .user-account{
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 50%;
+    font-size: 13.6px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100%;
+}
+ul.chat-container li .messageBubble img{
+	max-width: 100%;
+	height: auto;
+}
+ul.chat-container li.fromCurrentUser .messageBubble{
+    float:right;
+    padding: 12px 15px;
+    max-width: 70%;
+    font-size: 16px;
+    background-color: #009DAB;
+    color: white;
+    border-radius: 12px;
+    border-bottom-right-radius: 2px;
+    position: relative;
+    -webkit-animation: message-right ease-in-out 2s forwards;
+    -moz-animation: message-right ease-in-out 2s forwards;
+    animation: message-right ease-in-out 2s forwards;
+}
+ul.chat-container li.fromCurrentUser .extra-info{
+    padding-right: 5px;
+    text-align: right;
+}
+ul.chat-container li.fromCurrentUser .messageBubble .message-status{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: lightgray;
+    z-index: 1000;
+    display: inline-block;
+}
+ul.chat-container li.fromCurrentUser .messageBubble .message-status.recieved{
+    background-color: green;
+}
+ul.chat-container li.fromOtherUsers .messageBubble{
+    float:left;
+    background-color: #F1F0F0;
+    color:#333;
+    border-radius: 12px;
+    border-bottom-left-radius: 2px;
+    padding: 12px 15px;
+    max-width: 70%;
+    font-size: 16px;
+    -webkit-animation: message-left ease-in-out 2s forwards;
+    -moz-animation: message-left ease-in-out 2s forwards;
+    animation: message-left ease-in-out 2s forwards;
+}
+
+ul.chat-container li.fromOtherUsers.with-icon{
+    padding-left: 44px;
+    position: relative;
+}
+ul.chat-container li.fromOtherUsers .extra-info{
+    padding-left: 59px;
+    padding-right: 0;
+    text-align: left;
+}
+ul.chat-container li.fromOtherUsers.with-icon .extra-info{
+    padding-left: 5px;
+}
+.kore-chat-window .kore-chat-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 38px;
+    border-top: 1px solid #EEEEEE;
+    background:white;
+    padding: 5px 20px;
+}	
+
+.kore-chat-window .kore-chat-footer .chatInputBox{
+    width: 100%;
+    padding: 2px 0;
+    outline: none;
+    display: block;
+    font-size: 16px;
+    cursor: text;
+    margin-bottom: 16px;
+    max-height: 70px;
+    overflow-x: hidden;
+    overflow-y: auto;
+	font-family: "Lato", sans-serif;
+}
+.kore-chat-window .kore-chat-footer .chatSendMsg{
+    font-size: 14px;
+    color: #AAA;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+}
+
+/*.kore-chat-window .kore-chat-footer .sendChat{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: #127927;
+    margin-top: -16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 29px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+.kore-chat-window .kore-chat-footer .sendChat.disabled{
+    background: whitesmoke!important;
+    color: lightgray!important;
+}*/
+
+@keyframes message-left {
+    0% {
+        transform: translate3d(-15%, 5%, 0) scale3d(1, 1, 1);
+        visibility: visible
+    }
+    5% {
+        transform: translate3d(0, 0, 0) scale3d(1.01, 1.01, 1)
+    }
+    10% {
+        transform: translate3d(0, -2px, 0) scale3d(1.03, 1.03, 1)
+    }
+    15% {
+        transform: translate3d(0, 1px, 0) scale3d(1, 1, 1)
+    }
+    20% {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+    }
+}
+
+@keyframes message-right {
+    0% {
+        transform: translate3d(15%, 5%, 0) scale3d(1, 1, 1);
+        visibility: visible
+    }
+    5% {
+        transform: translate3d(0, 0, 0) scale3d(1.01, 1.01, 1)
+    }
+    10% {
+        transform: translate3d(0, -2px, 0) scale3d(1.03, 1.03, 1)
+    }
+    15% {
+        transform: translate3d(0, 1px, 0) scale3d(1, 1, 1)
+    }
+    20% {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+    }
+}
+.kore-auth-layover {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    background: rgba(0,0,0,0.3);
+}
+
+.kore-auth-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -40%;
+    width: 80%;
+    height: 500px;
+    z-index: 1001;
+    background: white;
+    min-width: 500px;
+    max-width: 1024px;
+}
+.kore-auth-popup iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.kore-auth-popup .popup_controls{
+    width: auto;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+.kore-auth-popup .popup_controls span{
+    cursor: pointer;
+    color: #909090;
+    opacity: 1;
+    font-size: 30px;
+    padding: 0;
+    border: 1px solid;
+    line-height: 36px;
+    border-radius: 50%;
+    background: white;
+    font-weight: bold;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    text-align: center;  
+}
+
+.kore-auth-popup .popup_controls span:not(.disabled):hover{
+    opacity: 0.6;
+}

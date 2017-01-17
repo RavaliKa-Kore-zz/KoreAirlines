@@ -1,9 +1,0 @@
-{
-    "inputsForPrerequisitesOfReports": {
-        "nameOfTest": "MRI"
-    },
-    
-    "MRITestPrerequisite": {
-        "prerequisitesForTheTest": "You can eat and take your medications as per your regular schedule. You may be asked to wear a hospital gown and to remove any jewellery you are wearing. You may be required to remove any removable dentures, hearing aids, watches or eyeglasses before the test."
-    }
-}
