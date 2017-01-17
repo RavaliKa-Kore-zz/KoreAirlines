@@ -17,7 +17,7 @@
 
 				// Client has to fill the claims and call the callback.
 				$.ajax({
-					url: "https://devbots.kore.net/api/users/sts",
+					url: "https://pilot-bots.kore.com/api/users/sts",
 					type: 'post',
 					headers: {
 						Authorization: "bearer xyz------"
@@ -32,7 +32,7 @@
 
 			var botOptions = {};
 			botOptions.logLevel = 'debug';
-			botOptions.koreAPIUrl = "https://devbots.kore.net/api/";
+			botOptions.koreAPIUrl = "https://pilot-bots.kore.com/api/";
 			botOptions.assertionFn = assertion;
 			/*
 			 Below config:(To support the anonymous user in test environments only.)
@@ -44,9 +44,9 @@
 			*/
 			botOptions.test = true;
 			botOptions.koreAnonymousFn = koreAnonymousFn;
-			botOptions.clientId   = "cs-d7eeb40c-2ff3-5b30-a43b-29f0d87f8f4c"; // secure client-id
+			botOptions.clientId   = "cs-7d98bd02-b965-5b11-8d87-03f308de1be5"; // secure client-id
 
-			botOptions.botInfo = {name:"Kore Insurance","_id":"st-99ad605c-aaa1-5002-a6f5-88e893c30268"}; // bot name is case sensitive
+			botOptions.botInfo = {name:"Kore Airlines","_id":"st-ce22bddb-6eea-53ca-bb03-20f88f4b1cad"}; // bot name is case sensitive
 			
 			var chatConfig={
 				botOptions:botOptions,
@@ -87,7 +87,7 @@
 	</head>
 	<body style="width: 100%; height: 100%;  margin:0; padding:0;">
 	<div style="width:100%; z-index:0; height:100%;">
-	    <img style="width: 100%;" src="../libs/images/koreinsu.jpg"/>
+	    <img style="width: 100%;" src="../libs/images/Airline.jpg"/>
 		
 	</div>
 		<div id="chatContainer" >
